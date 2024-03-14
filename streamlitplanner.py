@@ -46,9 +46,10 @@ def editing(trajet, df):
     heure_min = df['heure'].dt.time.min()
     heure_max = df['heure'].dt.time.max()
     duree_minutes = (heure_max.hour * 60 + heure_max.minute) - (heure_min.hour * 60 + heure_min.minute)
-
-    trajet.heure_depart = heure_min
-    trajet.heure_arrivee= heure_max
+    heure_formatee_min = heure_min.strftime("%H:%M")
+    heure_formatee_max = heure_max.strftime("%H:%M")
+    trajet.heure_depart = heure_formatee_min
+    trajet.heure_arrivee= heure_formatee_max
     trajet.duree = duree_minutes
 
 def delete_trajet(id):
