@@ -88,7 +88,7 @@ st.title('Planning Bus')
 with open("testdata.json", "r") as f:
     trajets_predefinis = json.load(f)
 noms_uniques = set()
-
+"""
 if not firebase_admin._apps:
     # Initialiser Firebase avec les informations de votre fichier de configuration Firestore
     cred = credentials.Certificate("firestore-key.json")
@@ -106,7 +106,7 @@ file_path = "trajets.json"
 # Obtenez l'URL de téléchargement du fichier
 blob = bucket.blob(file_path)
 url = blob.generate_signed_url()  # Lien expirera dans 1 heure
-
+"""
 st.write("URL de téléchargement du fichier:", url)
 # Itération sur la liste de trajets pré-définis pour extraire les noms uniques
 for trajet in trajets_predefinis:
