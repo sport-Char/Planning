@@ -89,8 +89,13 @@ with open("testdata.json", "r") as f:
     trajets_predefinis = json.load(f)
 noms_uniques = set()
 
-cred = credentials.Certificate("firestore-key.json")
-firebase_admin.initialize_app(cred)
+if not firebase_admin._apps:
+    # Initialiser Firebase avec les informations de votre fichier de configuration Firestore
+    cred = credentials.Certificate("firestore-key.json")
+    firebase_admin.initialize_app(cred)
+
+# Récupérer une référence à votre bucket de stockage Firebase
+bucket = storage.bucket("test-data-storage-19b29.appspot.com")
 
 # Récupérer une référence à votre bucket de stockage Firebase
 bucket = storage.bucket("test-data-storage-19b29.appspot.com")
