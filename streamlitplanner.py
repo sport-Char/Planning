@@ -90,10 +90,10 @@ with open("testdata.json", "r") as f:
 noms_uniques = set()
 
 cred = credentials.Certificate("firestore-key.json")
-firebase_admin.initialize_app(cred, {
-    'storageBucket': 'gs://test-data-storage-19b29.appspot.com'
-})
-bucket = storage.bucket()
+firebase_admin.initialize_app(cred)
+
+# Récupérer une référence à votre bucket de stockage Firebase
+bucket = storage.bucket("test-data-storage-19b29.appspot.com")
 
 # Chemin du fichier dans Firebase Storage
 file_path = "trajets.json"
