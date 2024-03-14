@@ -7,6 +7,8 @@ from streamlit_calendar import calendar
 from datetime import datetime, timedelta
 from datetime import time
 import itertools
+import firebase_admin
+from firebase_admin import credentials, storage
 st.set_page_config(layout="wide")
 
 class Trajet:
@@ -87,6 +89,20 @@ with open("testdata.json", "r") as f:
     trajets_predefinis = json.load(f)
 noms_uniques = set()
 
+cred = credentials.Certificate("firestore-key.json")
+firebase_admin.initialize_app(cred, {
+    'storageBucket': 'gs://test-data-storage-19b29.appspot.com'
+})
+bucket = storage.bucket()
+
+# Chemin du fichier dans Firebase Storage
+file_path = "trajets.json"
+
+# Obtenez l'URL de téléchargement du fichier
+blob = bucket.blob(file_path)
+url = blob.generate_signed_url(expires_in=3600)  # Lien expirera dans 1 heure
+
+st.write("URL de téléchargement du fichier:", url)
 # Itération sur la liste de trajets pré-définis pour extraire les noms uniques
 for trajet in trajets_predefinis:
     if "name" in trajet:
