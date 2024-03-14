@@ -89,7 +89,7 @@ with open("testdata.json", "r") as f:
     trajets_predefinis = json.load(f)
 noms_uniques = set()
 
-st.write("URL de téléchargement du fichier:", url)
+
 # Itération sur la liste de trajets pré-définis pour extraire les noms uniques
 for trajet in trajets_predefinis:
     if "name" in trajet:
