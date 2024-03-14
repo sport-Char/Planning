@@ -195,7 +195,14 @@ with col2:
                 trajet_recherche = trajet
                 break
         st.write("## Détails du trajet")
-        st.dataframe([vars(trajet_recherche)])
+        col_visualization = {
+            "Name" : trajet_recherche.name,
+            "Jour" : trajet_recherche.jour,
+            "Heure Départ" : trajet_recherche.heure_depart,
+            "Heure Arrivée" : trajet_recherche.heure_arrivee
+        }
+        trajet_df = pd.DataFrame([col_visualization])
+        st.dataframe(trajet_df,hide_index=True)
         etapes_df = pd.DataFrame(trajet_recherche.etape)
         etapes_df["heure"] = pd.to_datetime(etapes_df["heure"])
         if "reading" not in st.session_state:
@@ -207,7 +214,7 @@ with col2:
         with col_button2:
             if st.button("Supprimer"):
                 delete_trajet(selected_id)
-                st.experimental_rerun()
+                st.rerun()
         
         if st.session_state.reading:
             st.dataframe(etapes_df,column_config={
@@ -217,7 +224,7 @@ with col2:
                         max_value=time(23, 59),
                         format="hh:mm",
                         step=5,
-                    ),})
+                    ),},hide_index=True)
         else:
             new_data = st.data_editor(etapes_df,column_config={
                     "heure": st.column_config.TimeColumn(
@@ -230,7 +237,7 @@ with col2:
             if st.button("Enregistrer les modifications"):
                 st.session_state.reading = True
                 editing(trajet_recherche,new_data)
-                st.experimental_rerun()
+                st.rerun()
                 ##implémenter la modification des données
 
           
