@@ -217,6 +217,7 @@ with col2:
                 st.rerun()
         
         if st.session_state.reading:
+            etapes_df = etapes_df.sort_values(by='heure')
             st.dataframe(etapes_df,column_config={
                     "heure": st.column_config.TimeColumn(
                         "heure",
