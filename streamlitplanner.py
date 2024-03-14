@@ -212,18 +212,18 @@ with col2:
             st.dataframe(etapes_df,column_config={
                     "heure": st.column_config.TimeColumn(
                         "heure",
-                        min_value=time(0, 0, 0),
-                        max_value=time(23, 59, 59),
-                        format="hh:mm a",
+                        min_value=time(0, 0),
+                        max_value=time(23, 59),
+                        format="hh:mm",
                         step=5,
                     ),})
         else:
             new_data = st.data_editor(etapes_df,column_config={
                     "heure": st.column_config.TimeColumn(
                         "heure",
-                        min_value=time(0, 0, 0),
-                        max_value=time(23, 59, 59),
-                        format="hh:mm a",
+                        min_value=time(0, 0),
+                        max_value=time(23, 59),
+                        format="hh:mm",
                         step=5,
                     ),},num_rows= "dynamic")
             if st.button("Enregistrer les modifications"):
