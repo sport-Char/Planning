@@ -105,7 +105,7 @@ file_path = "trajets.json"
 
 # Obtenez l'URL de téléchargement du fichier
 blob = bucket.blob(file_path)
-url = blob.generate_signed_url(expires_in=3600)  # Lien expirera dans 1 heure
+url = blob.generate_signed_url()  # Lien expirera dans 1 heure
 
 st.write("URL de téléchargement du fichier:", url)
 # Itération sur la liste de trajets pré-définis pour extraire les noms uniques
