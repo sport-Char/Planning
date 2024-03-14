@@ -1,0 +1,433 @@
+[
+    {
+        "name": "AM / ITTRE",
+        "heure_depart": "06:45",
+        "duree": 100,
+        "etapes": [
+            {
+                "nom": "Zebra",
+                "heure": "06:45",
+                "commentaire": "Départ"
+            },
+            {
+                "nom": "ITTRE",
+                "heure": "07:20",
+                "commentaire": "A définir"
+            },
+            {
+                "nom": "MARCHIENNE",
+                "heure": "08:10",
+                "commentaire": "A définir"
+            },
+            {
+                "nom": "ZEBRA",
+                "heure": "08:25",
+                "commentaire": "Arrivée"
+            }
+        ],
+        "bus": "RENAULT",
+        "heure_arrivee": "08:25"
+    },
+    {
+        "name": "AM / MONS",
+        "heure_depart": "06:00",
+        "duree": 150,
+        "etapes":[
+            {
+            "nom": "Zebra",
+            "heure": "06:00",
+            "commentaire": "Départ"
+        },
+        {
+            "nom": "ARRET 1",
+            "heure": "06:50",
+            "commentaire": "A définir"
+        },
+        {
+            "nom": "ARRET 2",
+            "heure": "07:05",
+            "commentaire": "A définir"
+        },
+        {
+            "nom": "ARRET 3",
+            "heure": "07:20",
+            "commentaire": "A définir"
+        },
+        {
+            "nom": "VAUBAN",
+            "heure": "07:40",
+            "commentaire": "A définir"
+        },
+        {
+            "nom": "IND",
+            "heure": "07:50",
+            "commentaire": "A définir"
+        },
+        {
+            "nom": "MARCHIENNE",
+            "heure": "08:10",
+            "commentaire": "A définir"
+        },
+        {
+            "nom": "Zebra",
+            "heure": "08:30",
+            "commentaire": "Arrivée"
+        }
+    
+    
+    ],
+        "bus": "NAVETTE ZEBRA",
+        "heure_arrivee": "08:30"
+    },
+    {
+        "name": "AM/ ADEPS-IND-VAUBAN",
+        "heure_depart": "07:10",
+        "duree": 65,
+        "etapes":[
+            {
+                "nom": "STADE",
+                "heure": "07:10",
+                "commentaire": "Départ"
+            },
+            {
+                "nom": "ADEPS",
+                "heure": "07:30",
+                "commentaire": "A définir"
+            },
+            {
+                "nom": "IND",
+                "heure": "07:50",
+                "commentaire": "A définir"
+            },
+            {
+                "nom": "VAUBAN",
+                "heure": "08:00",
+                "commentaire": "A définir"
+            },
+            {
+                "nom": "STADE",
+                "heure": "08:15",
+                "commentaire": "Arrivée"
+            }
+        ],
+        "bus": "NAVETTE IVECO",
+        "heure_arrivee": "08:15"
+    },
+    {
+        "name": "AM / ADEPS-MARCHIENNE",
+        "heure_depart": "07:10",
+        "duree": 70,
+        "etapes":[
+            {
+                "nom": "ZEBRA",
+                "heure": "07:10",
+                "commentaire": "Départ"
+            },
+            {
+                "nom": "ADEPS",
+                "heure": "07:30",
+                "commentaire": "A définir"
+            },
+            {
+                "nom": "MARCHIENNE",
+                "heure": "08:05",
+                "commentaire": "A définir"
+            },
+            {
+                "nom": "ZEBRA",
+                "heure": "08:20",
+                "commentaire": "Arrivée"
+            }
+        ],
+        "bus": "BUS ARVY",
+        "heure_arrivee": "08:20"
+    },
+    {
+        "name": "PM / VAUBAN",
+        "heure_depart": "13:40",
+        "duree": 70,
+        "etapes":[
+            {
+                "nom": "VAUBAN",
+                "heure": "13:40",
+                "commentaire": "Départ"
+            },
+            {
+                "nom": "ZEBRA",
+                "heure": "14:00",
+                "commentaire": "A définir"
+            },
+            {
+                "nom": "OLYMPIC",
+                "heure": "14:15",
+                "commentaire": "A définir"
+            },
+            {
+                "nom": "ADEPS",
+                "heure": "14:35",
+                "commentaire": "A définir"
+            },
+            {
+                "nom": "VAUBAN",
+                "heure": "14:50",
+                "commentaire": "Arrivée"
+            }
+        ],
+        "bus": "BUS VAUBAN",
+        "heure_arrivee": "14:50"
+    },
+    {
+        "name": "PM / IND",
+        "heure_depart": "13:30",
+        "duree": 80,
+        "etapes":[
+            {
+                "nom": "ZEBRA",
+                "heure": "13:30",
+                "commentaire": "Départ"
+            },
+            {
+                "nom": "IND",
+                "heure": "13:40",
+                "commentaire": "A définir"
+            },
+            {
+                "nom": "ZEBRA",
+                "heure": "13:55",
+                "commentaire": "A définir"
+            },
+            {
+                "nom": "OLYMPIC",
+                "heure": "14:10",
+                "commentaire": "A définir"
+            },
+            {
+                "nom": "ADEPS",
+                "heure": "14:30",
+                "commentaire": "A définir"
+            },
+            {
+                "nom": "ZEBRA",
+                "heure": "14:50",
+                "commentaire": "Arrivée"
+            }
+        ],
+        "bus": "RENAULT",
+        "heure_arrivee": "14:50"
+    },
+    {
+        "name": "PM / MARCHIENNE",
+        "heure_depart": "13:30",
+        "duree": 65,
+        "etapes":[
+            {
+                "nom": "ZEBRA",
+                "heure": "13:30",
+                "commentaire": "Départ"
+            },
+            {
+                "nom": "MARCHIENNE",
+                "heure": "13:55",
+                "commentaire": "A définir"
+            },
+            {
+                "nom": "ZEBRA",
+                "heure": "14:10",
+                "commentaire": "A définir"
+            },
+            {
+                "nom": "ADEPS",
+                "heure": "14:35",
+                "commentaire": "Arrivée"
+            }
+        ],
+        "bus": "BUS ARVY",
+        "heure_arrivee": "14:35"
+    },
+    {
+        "name": "PM / 1",
+        "heure_depart": "15:00",
+        "duree": 225,
+        "etapes":[
+            {
+                "nom": "STADE",
+                "heure": "15:00",
+                "commentaire": "Départ"
+            },
+            {
+                "nom": "OLYMPIC",
+                "heure": "16:20",
+                "commentaire": "A définir"
+            },
+            {
+                "nom": "MARCHIENNE",
+                "heure": "16:30",
+                "commentaire": "A définir"
+            },
+            {
+                "nom": "ZEBRA",
+                "heure": "16:45",
+                "commentaire": "A définir"
+            },
+            {
+                "nom": "GARE",
+                "heure": "17:00",
+                "commentaire": "A définir"
+            },
+            {
+                "nom": "ADEPS",
+                "heure": "17:20",
+                "commentaire": "A définir"
+            },
+            {
+                "nom": "GARE",
+                "heure": "17:40",
+                "commentaire": "A définir"
+            },
+            {
+                "nom": "GARE",
+                "heure": "18:15",
+                "commentaire": "A définir"
+            },
+            {
+                "nom": "ZEBRA",
+                "heure": "18:30",
+                "commentaire": "A définir"
+            },
+            {
+                "nom": "STADE",
+                "heure": "18:45",
+                "commentaire": "Arrivé"
+            }
+        ],
+        "bus": "NAVETTE IVECO",
+        "heure_arrivee": "18:45"
+    },
+    {
+        "name": "PM / 2",
+        "heure_depart": "13:30",
+        "duree":315,
+        "etapes":[
+            {
+                "nom": "ZEBRA",
+                "heure": "13:30",
+                "commentaire": "Départ"
+            },
+            {
+                "nom": "GARE",
+                "heure": "13:45",
+                "commentaire": "A définir"
+            },
+            {
+                "nom": "ZEBRA",
+                "heure": "14:00",
+                "commentaire": "A définir"
+            },
+            {
+                "nom": "ZEBRA",
+                "heure": "16:45",
+                "commentaire": "A définir"
+            },
+            {
+                "nom": "GARE",
+                "heure": "17:00",
+                "commentaire": "A définir"
+            },
+            {
+                "nom": "ADEPS",
+                "heure": "17:15",
+                "commentaire": "A définir"
+            },
+            {
+                "nom": "ZEBRA",
+                "heure": "17:30",
+                "commentaire": "A définir"
+            },
+            {
+                "nom": "ZEBRA",
+                "heure": "18:15",
+                "commentaire": "A définir"
+            },
+            {
+                "nom": "GARE",
+                "heure": "18:30",
+                "commentaire": "A définir"
+            },
+            {
+                "nom": "ADEPS",
+                "heure": "18:45",
+                "commentaire": "Arrivée"
+            }
+        ],
+        "bus": "NAVETTE ZEBRA",
+        "heure_arrivee": "18:45"
+    },
+    {
+        "name": "PM / 3",
+        "heure_depart": "19:30",
+        "duree": 90,
+        "etapes":[
+            {
+                "nom": "ZEBRA",
+                "heure": "19:30",
+                "commentaire": "Départ"
+            },
+            {
+                "nom": "ADEPS",
+                "heure": "19:45",
+                "commentaire": "A définir"
+            },
+            {
+                "nom": "ZEBRA",
+                "heure": "20:30",
+                "commentaire": "A définir"
+            },
+            {
+                "nom": "GARE",
+                "heure": "20:45",
+                "commentaire": "A définir"
+            },
+            {
+                "nom": "ZEBRA",
+                "heure": "21:00",
+                "commentaire": "Arrivée"
+            }
+        ],
+        "bus": "RENAULT",
+        "heure_arrivee": "21:00"
+    },
+    {
+        "name": "AM / PRO",
+        "heure_depart": "10:00",
+        "duree": 150,
+        "etapes":[
+            {
+                "nom": "STADE",
+                "heure": "10:00",
+                "commentaire": "Départ"
+            },
+            {
+                "nom": "STADE",
+                "heure": "10:30",
+                "commentaire": "A définir"
+            },
+            {
+                "nom": "MARCINELLE",
+                "heure": "10:45",
+                "commentaire": "A définir"
+            },
+            {
+                "nom": "MARCINELLE",
+                "heure": "12:15",
+                "commentaire": "A définir"
+            },
+            {
+                "nom": "STADE",
+                "heure": "12:30",
+                "commentaire": "Arrivée"
+            }
+        ],
+        "bus": "BUS PRO",
+        "heure_arrivee": "12:30"
+    }
+]
