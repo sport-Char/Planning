@@ -115,7 +115,6 @@ calendar_events = []
 for trajet in st.session_state.trajets:
     # Convertir l'heure de départ en objet datetime
     test = f"{trajet.jour}T{trajet.heure_depart}:00"
-    st.write(test)
     heure_depart_dt = datetime.fromisoformat(test)
     
     # Calculer l'heure d'arrivée en ajoutant la durée au départ
@@ -209,7 +208,7 @@ with col2:
             if st.button("Supprimer"):
                 delete_trajet(selected_id)
                 st.experimental_rerun()
-        st.write(st.session_state.reading)
+        
         if st.session_state.reading:
             st.dataframe(etapes_df,column_config={
                     "heure": st.column_config.TimeColumn(
