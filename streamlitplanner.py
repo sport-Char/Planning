@@ -58,8 +58,30 @@ def delete_trajet(id):
             index_trajet_a_supprimer = index
             del st.session_state.trajets[index_trajet_a_supprimer]
 
-
-
+def trajet_to_dict(trajet):
+    
+    if isinstance(trajet.jour, str):
+        jour = trajet.jour
+    else:
+        jour = trajet.jour.strftime("%Y-%m-%d")
+    
+    return {
+        "id": trajet.id,
+        "name": trajet.name,
+        "jour": jour,
+        "heure_depart": trajet.heure_depart,
+        "duree": trajet.duree,
+        "bus": trajet.bus,
+        "heure_arrivee": trajet.heure_arrivee,
+        "etapes": trajet.etape
+    }
+if 'trajets' not in st.session_state:
+    
+    st.session_state.trajets = []
+    with open("trajets.json", "r") as f:
+        test_traj = json.load(f)
+        for t in test_traj:
+            st.session_state.trajets.append(Trajet(t["id"],t["name"],t["jour"], t["heure_depart"], t["duree"], t["bus"],t["etapes"] ))
 st.title('Planning Bus')
 with open("testdata.json", "r") as f:
     trajets_predefinis = json.load(f)
@@ -199,12 +221,13 @@ with col2:
             "Name" : trajet_recherche.name,
             "Jour" : trajet_recherche.jour,
             "Heure Départ" : trajet_recherche.heure_depart,
-            "Heure Arrivée" : trajet_recherche.heure_arrivee
+            "Heure Arrivée" : trajet_recherche.heure_arrivee,
+            "Bus" : trajet_recherche.bus
         }
         trajet_df = pd.DataFrame([col_visualization])
         st.dataframe(trajet_df,hide_index=True)
         etapes_df = pd.DataFrame(trajet_recherche.etape)
-        etapes_df["heure"] = pd.to_datetime(etapes_df["heure"])
+        
         if "reading" not in st.session_state:
             st.session_state.reading = True
         col_button1, col_button2 = st.columns(2)
@@ -218,27 +241,20 @@ with col2:
         
         if st.session_state.reading:
             etapes_df = etapes_df.sort_values(by='heure')
-            st.dataframe(etapes_df,column_config={
-                    "heure": st.column_config.TimeColumn(
-                        "heure",
-                        min_value=time(0, 0),
-                        max_value=time(23, 59),
-                        format="hh:mm",
-                        step=5,
-                    ),},hide_index=True)
+            st.dataframe(etapes_df,hide_index=True)
         else:
-            new_data = st.data_editor(etapes_df,column_config={
-                    "heure": st.column_config.TimeColumn(
-                        "heure",
-                        min_value=time(0, 0),
-                        max_value=time(23, 59),
-                        format="hh:mm",
-                        step=5,
-                    ),},num_rows= "dynamic")
+            new_data = st.data_editor(etapes_df,num_rows= "dynamic")
             if st.button("Enregistrer les modifications"):
                 st.session_state.reading = True
                 editing(trajet_recherche,new_data)
                 st.rerun()
                 ##implémenter la modification des données
+if st.button("Sauvegarder l'ensemble des modifications"):
+    trajets_data = []
+    for trajet in st.session_state.trajets:
+        trajets_data.append(trajet_to_dict(trajet))
+    with open("trajets.json", "w") as json_file:
+        json.dump(trajets_data, json_file, indent=4)
+        st.success("Modifications sauvegardées")
 
           
