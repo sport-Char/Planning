@@ -114,6 +114,7 @@ calendar_events = []
 for trajet in st.session_state.trajets:
     # Convertir l'heure de départ en objet datetime
     test = f"{trajet.jour}T{trajet.heure_depart}:00"
+    st.write(test)
     heure_depart_dt = datetime.fromisoformat(test)
     
     # Calculer l'heure d'arrivée en ajoutant la durée au départ
